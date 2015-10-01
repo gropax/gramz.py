@@ -1,9 +1,10 @@
-#from gramz.grammar import Grammar, Production
-#import gramz.production
-#import gramz.grammar
+from gramz.helpers import *
 from gramz.production import Production
 from gramz.grammar import Grammar
+from gramz.remove_unreachable import *
+from gramz.remove_unproductive import *
 
 def grammar(lst):
+    init = lst[0][0]
     prods = [Production(*p) for p in lst]
-    return Grammar(prods)
+    return Grammar(init, prods)

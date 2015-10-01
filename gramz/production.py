@@ -21,4 +21,4 @@ class Production:
         return hash((self.lhs, self.rhs))
 
     def __str__(self):
-        return lhs(p) + " => " + (" ".join(rhs(p)) or u"\u03B5")
+        return self.lhs + " => " + (" ".join(self.rhs) or u"\u03B5")
