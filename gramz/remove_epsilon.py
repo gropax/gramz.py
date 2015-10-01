@@ -18,8 +18,7 @@ def remove_epsilon(gram):
 
     # Build rules
     for p in gram:
-        # !!! Problem here !!!
-        if not p.epsilon:
+        if not p.epsilon():
             combs = [[]]
             for s in p.rhs:
                 new = [c + [s] for c in combs]

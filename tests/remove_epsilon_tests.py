@@ -9,8 +9,7 @@ expected = [("S'", ('S')),
             ('S', ('a', 'S', 'b', 'S')),
             ('S', ('a', 'b', 'S')),
             ('S', ('a', 'S', 'b')),
-            ('S', ('a', 'b')),
-            ('S', ())]
+            ('S', ('a', 'b'))]
 
 class TestRemoveEpsilon:
     def setup(self):
