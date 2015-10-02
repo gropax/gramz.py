@@ -1,0 +1,46 @@
+\documentclass[frenchb]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{minted}
+\usemintedstyle{monokai}
+
+\definecolor{Black}{HTML}{000000}
+
+\begin{document}
+
+
+\section{Implémentation des structures de données}
+\subsection{Grammaires}
+\inputminted[bgcolor=Black]{python}{gramz/grammar.py}
+\subsection{Productions}
+\inputminted[bgcolor=Black]{python}{gramz/production.py}
+\subsection{Helpers}
+\inputminted[bgcolor=Black]{python}{gramz/helpers.py}
+
+\section{Suppression des symboles inaccessibles}
+\inputminted[bgcolor=Black]{python}{gramz/transfo/remove_unreachable.py}
+
+\section{Suppression des symboles non productifs}
+\inputminted[bgcolor=Black]{python}{gramz/transfo/remove_unproductive.py}
+
+\section{Suppression des $\epsilon$-productions}
+\inputminted[bgcolor=Black]{python}{gramz/transfo/remove_epsilon.py}
+
+\section{Suppression des productions singulières}
+\inputminted[bgcolor=Black]{python}{gramz/transfo/remove_unit.py}
+
+\section{Forme normale de Chomsky (forme quadratique)}
+\inputminted[bgcolor=Black]{python}{gramz/transfo/chomsky_normal_form.py}
+
+\section{Suppression de la récursivité gauche}
+\inputminted[bgcolor=Black]{python}{gramz/transfo/remove_left_recursion.py}
+
+\section{Factorisation à gauche}
+\inputminted[bgcolor=Black]{python}{gramz/transfo/factorize.py}
+
+\section{Forme normale Greibach}
+\inputminted[bgcolor=Black]{python}{gramz/transfo/greibach_normal_form.py}
+
+\end{document}

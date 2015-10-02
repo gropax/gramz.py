@@ -56,3 +56,8 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Latex generation artefacts
+docs/**
+!docs/*.tex
+gramz.pyg
