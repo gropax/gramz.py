@@ -1,15 +1,18 @@
 from nose.tools import *
 from gramz import grammar, chomsky_normal_form
 
-input = [('S', ('a', 'S', 'b', 'S')),
-         ('S', ())]
+input = [('S', ('c', 'A', 'c', 'B')),
+         ('A', ('a',)),
+         ('B', ('b', 'A'))]
 
-expected = [("S'", ('S')),
-            ("S'", ()),
-            ('S', ('a', 'S', 'b', 'S')),
-            ('S', ('a', 'b', 'S')),
-            ('S', ('a', 'S', 'b')),
-            ('S', ('a', 'b'))]
+expected = [('S', ('C', 'X')),
+            ('X', ('A', 'X0')),
+            ('X0', ('C0', 'B')),
+            ('A', ('a',)),
+            ('B', ('B0', 'A')),
+            ('B0', ('b',)),
+            ('C', ('c',)),
+            ('C0', ('c',))]
 
 class TestChomskyNormalForm:
     def setup(self):

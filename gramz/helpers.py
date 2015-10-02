@@ -12,4 +12,12 @@ def term(sym):
 def nonterm(sym):
     return not term(sym)
 
-
+def newsym(syms, sym):
+    if sym in syms:
+        i, s = 0, sym + "0"
+        while s in syms:
+            i += 1
+            s = sym + str(i)
+        return s
+    else:
+        return sym
